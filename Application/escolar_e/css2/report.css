@@ -1,0 +1,66 @@
+.border{
+	border-style:solid;
+	border-width: 1px;
+}
+
+.h20{height: 20%}
+.h25{height: 25%}
+.h30{height: 30%}
+.h33{height: 33%}
+.h100{height: 100%}
+
+.w25{width: 25%;}
+.w30{width: 30%;}
+.w35{width: 35%;}
+.w40{width: 40%;}
+.w45{width: 45%;}
+.w50{width: 50%;}
+.w55{width: 55%;}
+.w60{width: 60%;}
+.w65{width: 65%;}
+.w70{width: 70%;}
+.w100{width: 100%;}
+
+.right{	float: right;}
+.left{	float: left;}
+.text-right{text-align: right;}
+
+.MainReportContainer{	
+	width:auto;
+	height:auto;	
+	font-family: arial, tahoma;
+}
+
+.ReportHeader{	
+	height: 80px;
+}
+
+.ReportHeader .RH_Logo{
+	height: 80px;
+	width: 11%;
+	margin: 20px;
+	margin-top: 5px;
+	margin-left: 15px;	
+}
+
+.ReportHeader .RH_Title{
+	height: 80px;
+	width: 65%;
+	margin-left: 20px;	
+	padding-left : 10px;
+	padding-right : 10px;
+	text-align: center;	
+	font-size: x-large
+}
+
+.ReportHeader .RH_Foto{	
+	height: 80px;
+	width: 11%;	
+	margin-left : 20px;	
+}
+
+.ReportBody{}
+
+.RB_INS .campus{
+	text-align: right;
+}

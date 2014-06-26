@@ -1,0 +1,83 @@
+<?php /* @var $this Controller */ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+
+	<!-- blueprint CSS framework -->
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css2/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css2/print.css" media="print" />
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css2/main.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css2/form.css" />
+	
+	
+	  <script src="js/jquery-1.7.1.min.js"></script>
+	  <script src="js/jquery-ui-1.8.17.min.js"></script>
+	  <script src="js/styler.js"></script>
+	  <script src="js/jquery.tipTip.js"></script>
+	  <script src="js/colorpicker.js"></script>
+	  <script src="js/sticky.full.js"></script>
+	  <script src="js/global.js"></script>
+	  <script src="js/flot/jquery.flot.min.js"></script>
+	  <script src="js/flot/jquery.flot.resize.min.js"></script>
+	  <script src="js/jquery.dataTables.min.js"></script>
+
+	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+</head>
+
+<body>
+
+<div class="container" id="page">	
+
+	<div id="header">
+		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+	</div><!-- header -->
+
+	<div id="mainmenu">
+		<?php $this->widget('zii.widgets.CMenu',array(
+			'items'=>array(
+				
+				array('label'=>'Ciclos', 'url'=>array('/ciclo')),				
+				array('label'=>'Grado', 'url'=>array('/grado')),
+				array('label'=>'Grupos', 'url'=>array('/grupo')),
+				array('label'=>'Materias', 'url'=>array('/materias')),
+				array('label'=>'Aulas', 'url'=>array('/aulas')),
+				
+				array('label'=>'Alumno', 'url'=>array('/alumno/create')),
+				array('label'=>'Profesores', 'url'=>array('/profesores/create')),
+				array('label'=>'Inscripcion', 'url'=>array('/inscripcion')),
+
+				array('label'=>'Historial de Conducta', 'url'=>array('/historialConducta')),
+
+				array('label'=>'Requisitos', 'url'=>array('/RequisitosSeccion')),
+								
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+			),
+		)); ?>
+	</div><!-- mainmenu -->
+	<?php if(isset($this->breadcrumbs)):?>
+		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+			'links'=>$this->breadcrumbs,
+		)); ?><!-- breadcrumbs -->
+	<?php endif?>
+
+	<?php echo $content; ?>
+
+	<div class="clear"></div>
+
+	<div id="footer">
+		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+		All Rights Reserved.<br/>
+		<?php //echo Yii::powered(); ?>
+	</div><!-- footer -->
+
+</div><!-- page -->
+
+</body>
+</html>

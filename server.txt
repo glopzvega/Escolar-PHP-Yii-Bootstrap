@@ -1,0 +1,18 @@
+Sitio
+www.proyectos-ssae.com/espanol
+
+ftp 
+usuario = gerardo@proyectos-ssae.com
+password = gerardo2013
+
+bd
+proyec90_espanol
+usuario = proyec90_gerardo
+password = gerardo2013
+
+Cpanel
+http://proyectos-ssae.com:2082/cpsess8741240518/3rdparty/phpMyAdmin/index.php
+usuario:proyec90
+password:7d39QxbvL6
+
+IP Base de Datos: 10.33.143.24
